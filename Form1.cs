@@ -252,6 +252,8 @@ namespace ClipboardEVE
         IntPtr _ClipboardViewerNext;
         List<string> Modules;
         List<string> Items;
+        List<string[]> Scans = new List<string[]>();
+        bool extended = false;
 
         private void RegisterClipboardViewer()
         {
@@ -328,24 +330,30 @@ namespace ClipboardEVE
 
                                 Match matchbuy = Regex.Match(responseString, @"<span class=""nowrap"">\n      (.*)<small>estimated <strong>buy</strong> value  in Jita</small>");
                                 Match matchsell = Regex.Match(responseString, @"<span class=""nowrap"">\n      (.*)<small>estimated <strong>sell</strong> value  in Jita</small>");
+                                Match matchm3 = Regex.Match(responseString, @"<span class=""nowrap"">(.*)m<sup>3</sup></span>");
                                 Match matchlink = Regex.Match(responseString,@"http://evepraisal\.com/e/.......");
                                 
                             
                                 
                                 if(matchsell.Success)
-                                    {
-                                        string buy = matchbuy.Groups[1].Value;
-                                        string sell = matchsell.Groups[1].Value;
-                                        string link = matchlink.Captures[0].Value;
-                                        Form2 popup = new Form2();
-                                        popup.lblBuy.Text = buy;
-                                        popup.lblSell.Text = sell;
-                                        label4.Text = sell;
-                                        label5.Text = buy;
-                                        linkLabel1.Text = link;
-                                        popup.Show();
-                                        popup.Location = new Point(Screen.PrimaryScreen.Bounds.Width - popup.Size.Width - 10, Screen.PrimaryScreen.Bounds.Height - popup.Size.Height - 10);
-                                    }
+                                {
+                                    string buy = matchbuy.Groups[1].Value;
+                                    string sell = matchsell.Groups[1].Value;
+                                    string m3 = matchm3.Groups[1].Value;
+                                    string link = matchlink.Captures[0].Value;
+                                    Scans.Add( new string[4]{buy,sell,m3,link} );
+                                    Form2 popup = new Form2();
+                                    popup.lblBuy.Text = buy;
+                                    popup.lblSell.Text = sell;
+                                    popup.lblm3.Text = m3 + "m3";
+                                    label4.Text = sell;
+                                    label5.Text = buy;
+                                    label7.Text = m3 + "m3";
+                                    linkLabel1.Text = link;
+                                    popup.Show();
+                                    popup.Location = new Point(Screen.PrimaryScreen.Bounds.Width - popup.Size.Width - 10, Screen.PrimaryScreen.Bounds.Height - popup.Size.Height - 10);
+                                    
+                                }
                             }
                         }
                         
@@ -421,6 +429,9 @@ namespace ClipboardEVE
             Properties.Settings.Default.Save();
         }
 
+        private void label3_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

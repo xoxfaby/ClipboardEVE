@@ -1,0 +1,9 @@
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\bin\Release\ClipboardEVE.exe.config
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\bin\Release\ClipboardEVE.exe
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\bin\Release\ClipboardEVE.pdb
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Release\ClipboardEVE.Form1.resources
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Release\ClipboardEVE.Form2.resources
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Release\ClipboardEVE.Properties.Resources.resources
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Release\ClipboardEVE.csproj.GenerateResource.Cache
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Release\ClipboardEVE.exe
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Release\ClipboardEVE.pdb

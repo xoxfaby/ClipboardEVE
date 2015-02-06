@@ -34,13 +34,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblSell = new System.Windows.Forms.Label();
             this.lblBuy = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblm3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 34);
+            this.label2.Location = new System.Drawing.Point(12, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 25);
             this.label2.TabIndex = 1;
@@ -81,19 +83,41 @@
             this.lblBuy.TabIndex = 1;
             this.lblBuy.Text = "Sell:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 25);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Size:";
+            // 
+            // lblm3
+            // 
+            this.lblm3.AutoSize = true;
+            this.lblm3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblm3.Location = new System.Drawing.Point(77, 60);
+            this.lblm3.Name = "lblm3";
+            this.lblm3.Size = new System.Drawing.Size(59, 25);
+            this.lblm3.TabIndex = 1;
+            this.lblm3.Text = "Sell:";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(383, 69);
+            this.ClientSize = new System.Drawing.Size(383, 95);
+            this.Controls.Add(this.lblm3);
             this.Controls.Add(this.lblBuy);
             this.Controls.Add(this.lblSell);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Size:";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form2_Load);
             this.Click += new System.EventHandler(this.Form2_Click);
@@ -109,5 +133,7 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label lblSell;
         public System.Windows.Forms.Label lblBuy;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label lblm3;
     }
 }
