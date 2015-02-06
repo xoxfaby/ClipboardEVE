@@ -36,6 +36,7 @@
             this.lblBuy = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblm3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -103,12 +104,27 @@
             this.lblm3.TabIndex = 1;
             this.lblm3.Text = "Sell:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
+            this.label4.Location = new System.Drawing.Point(39, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(319, 50);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Problem with one or more items.\r\nClick to open EVEPraisal";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Visible = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(383, 95);
+            this.ClientSize = new System.Drawing.Size(383, 94);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.lblm3);
             this.Controls.Add(this.lblBuy);
             this.Controls.Add(this.lblSell);
@@ -135,5 +151,6 @@
         public System.Windows.Forms.Label lblBuy;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label lblm3;
+        private System.Windows.Forms.Label label4;
     }
 }

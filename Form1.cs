@@ -253,7 +253,7 @@ namespace ClipboardEVE
         List<string> Modules;
         List<string> Items;
         List<string[]> Scans = new List<string[]>();
-        bool extended = false;
+        //bool extended = false;
 
         private void RegisterClipboardViewer()
         {
@@ -307,6 +307,7 @@ namespace ClipboardEVE
                             }
                             else
                             {
+                                isModules = false;
                                 isItems = false;
                             }
                         }
@@ -315,28 +316,40 @@ namespace ClipboardEVE
                         {
 
                         }
-                        else if (isItems || checkBox1.Checked)
+                        else if (isItems | checkBox1.Checked)
                         {
 
                             using (var client = new WebClient())
                             {
+                                cliptext = cliptext.Replace("\t", "  ");
                                 var values = new NameValueCollection();
                                 values["market"] = "30000142";
                                 values["raw_paste"] = cliptext;
 
                                 var response = client.UploadValues("http://evepraisal.com/estimate", values);
-
+                                
                                 var responseString = Encoding.Default.GetString(response);
+                                /*
+                                string tempFile = Path.GetTempFileName();
+                                tempFile = Path.ChangeExtension(tempFile, ".html");
+                                System.IO.File.WriteAllText(tempFile, responseString);
+                                System.Diagnostics.Process.Start(tempFile); 
+                                */
 
                                 Match matchbuy = Regex.Match(responseString, @"<span class=""nowrap"">\n      (.*)<small>estimated <strong>buy</strong> value  in Jita</small>");
                                 Match matchsell = Regex.Match(responseString, @"<span class=""nowrap"">\n      (.*)<small>estimated <strong>sell</strong> value  in Jita</small>");
                                 Match matchm3 = Regex.Match(responseString, @"<span class=""nowrap"">(.*)m<sup>3</sup></span>");
                                 Match matchlink = Regex.Match(responseString,@"http://evepraisal\.com/e/.......");
                                 
-                            
+                                
                                 
                                 if(matchsell.Success)
                                 {
+                                    bool invalid = false;
+                                    if (responseString.Contains("No Market Volume") | responseString.Contains("Unknown"))
+                                    {
+                                        invalid = true;
+                                    }
                                     string buy = matchbuy.Groups[1].Value;
                                     string sell = matchsell.Groups[1].Value;
                                     string m3 = matchm3.Groups[1].Value;
@@ -346,11 +359,14 @@ namespace ClipboardEVE
                                     popup.lblBuy.Text = buy;
                                     popup.lblSell.Text = sell;
                                     popup.lblm3.Text = m3 + "m3";
+                                    popup.link = link;
+                                    popup.invalid = invalid;
                                     label4.Text = sell;
                                     label5.Text = buy;
                                     label7.Text = m3 + "m3";
                                     linkLabel1.Text = link;
                                     popup.Show();
+                                    if (invalid) { popup.Size = new Size(383, 141); }
                                     popup.Location = new Point(Screen.PrimaryScreen.Bounds.Width - popup.Size.Width - 10, Screen.PrimaryScreen.Bounds.Height - popup.Size.Height - 10);
                                     
                                 }
