@@ -28,14 +28,10 @@ namespace ClipboardEVE
                 label4.Visible = true;
             }
         }
-
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (once)
-            {
                 this.Close();
-            }
-            once = true;
         }
 
         private void Form2_Click(object sender, EventArgs e)

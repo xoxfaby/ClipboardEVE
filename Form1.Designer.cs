@@ -42,7 +42,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -148,12 +151,42 @@
             this.label7.Size = new System.Drawing.Size(0, 13);
             this.label7.TabIndex = 7;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(105, 100);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(112, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Popup time (seconds):";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.DecimalPlaces = 2;
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown1.Location = new System.Drawing.Point(246, 98);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(97, 20);
+            this.numericUpDown1.TabIndex = 9;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(350, 122);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
@@ -172,6 +205,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +225,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

@@ -1,9 +1,13 @@
 C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\bin\Debug\ClipboardEVE.exe.config
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\bin\Debug\ClipboardEVE.exe.manifest
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\bin\Debug\ClipboardEVE.application
 C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\bin\Debug\ClipboardEVE.exe
 C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\bin\Debug\ClipboardEVE.pdb
 C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Debug\ClipboardEVE.Form1.resources
 C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Debug\ClipboardEVE.Form2.resources
 C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Debug\ClipboardEVE.Properties.Resources.resources
 C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Debug\ClipboardEVE.csproj.GenerateResource.Cache
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Debug\ClipboardEVE.exe.manifest
+C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Debug\ClipboardEVE.application
 C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Debug\ClipboardEVE.exe
 C:\Users\Fabian\documents\visual studio 2010\Projects\ClipboardEVE\ClipboardEVE\obj\x86\Debug\ClipboardEVE.pdb

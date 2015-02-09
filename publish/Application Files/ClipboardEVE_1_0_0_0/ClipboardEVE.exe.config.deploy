@@ -10,9 +10,6 @@
             <setting name="Bruteforce" serializeAs="String">
                 <value>False</value>
             </setting>
-            <setting name="Popuptime" serializeAs="String">
-                <value>2</value>
-            </setting>
         </ClipboardEVE.Properties.Settings>
     </userSettings>
 </configuration>

@@ -356,6 +356,7 @@ namespace ClipboardEVE
                                     string link = matchlink.Captures[0].Value;
                                     Scans.Add( new string[4]{buy,sell,m3,link} );
                                     Form2 popup = new Form2();
+                                    popup.timer1.Interval = (int) (1000 * numericUpDown1.Value);
                                     popup.lblBuy.Text = buy;
                                     popup.lblSell.Text = sell;
                                     popup.lblm3.Text = m3 + "m3";
@@ -405,6 +406,7 @@ namespace ClipboardEVE
             this.CenterToScreen();
 
             checkBox1.Checked = Properties.Settings.Default.Bruteforce;
+            numericUpDown1.Value = Properties.Settings.Default.Popuptime;
 
             RegisterClipboardViewer();
         }
@@ -448,6 +450,12 @@ namespace ClipboardEVE
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Popuptime = numericUpDown1.Value;
+            Properties.Settings.Default.Save();
         }
     }
 }
